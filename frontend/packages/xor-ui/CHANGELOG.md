@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](/compare/@xor/ui@1.1.0...@xor/ui@1.2.0) (2021-11-06)
+
+
+### Features
+
+* **ui:** create page elements c5dd5f6
+
+
+
+
+
 # [1.1.0](/compare/@xor/ui@1.0.1...@xor/ui@1.1.0) (2021-11-06)
 
 

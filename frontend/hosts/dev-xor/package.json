@@ -1,6 +1,6 @@
 {
   "name": "@xor/dev-xor",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Dev host for running the app without any network dependencies",
   "main": "index.json",
   "author": "Jiri Kantor",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@types/react-dom": "^17.0.11",
-    "@xor/ui": "^1.1.0",
+    "@xor/ui": "^1.2.0",
     "express": "^4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -32,10 +32,10 @@
     "@xor/eslint-config-react": "^1.0.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^6.4.1",
+    "css-loader": "^5.2.7",
     "html-webpack-plugin": "4.5.2",
     "less": "^4.1.2",
     "less-loader": "7.3.0",
-    "css-loader": "^5.2.7",
     "mini-css-extract-plugin": "^1.6.2",
     "node-loader": "^1.0.3",
     "null-loader": "^4.0.1",

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](/compare/@xor/dev-xor@1.0.2...@xor/dev-xor@1.1.0) (2021-11-06)
+
+
+### Features
+
+* **dev-xor:** add less style support a4fee6d
+* **dev-xor:** tweak template styling 3939986
+
+
+
+
+
 ## [1.0.2](/compare/@xor/dev-xor@1.0.1...@xor/dev-xor@1.0.2) (2021-11-06)
 
 **Note:** Version bump only for package @xor/dev-xor
