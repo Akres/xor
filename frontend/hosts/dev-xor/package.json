@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "eslint . --ext .tsx,.ts,.js --ignore-path ../../../.eslintignore",
     "clean": "rimraf lib",
+    "build": "tsc",
     "watch:server": "webpack --watch --config webpack.server.config.js",
     "watch:client": "webpack --watch --config webpack.client.config.js",
     "watch": "run-p watch:server watch:client"
