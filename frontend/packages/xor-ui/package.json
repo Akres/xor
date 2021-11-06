@@ -8,8 +8,10 @@
   "private": true,
   "scripts": {
     "clean": "rimraf lib",
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "run-s lib:build style:copy",
+    "lib:build": "tsc",
+    "style:copy": "cpx \"./src/**/*.less\" \"./lib\" --verbose",
+    "watch": "run-p \"lib:build -w\" \"style:copy -w --no-initial\"",
     "lint": "eslint . --ext .tsx,.ts,.js --ignore-path ../../../.eslintignore"
   },
   "dependencies": {
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@types/react": "^17.0.34",
     "@xor/eslint-config": "^1.0.0",
-    "@xor/eslint-config-react": "^1.0.0"
+    "@xor/eslint-config-react": "^1.0.0",
+    "cpx": "^1.5.0"
   }
 }
