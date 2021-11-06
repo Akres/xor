@@ -1,5 +1,8 @@
 import yargs from "yargs";
+import lintCommitsCommand from "./lintCommitsCommand";
 
-yargs.help()
+yargs
     .strict()
-    .demandCommand();
+    .demandCommand()
+    .command(lintCommitsCommand)
+    .parse();

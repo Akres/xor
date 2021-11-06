@@ -11,11 +11,14 @@
   "scripts": {
     "clean": "rimraf lib",
     "build": "tsc",
+    "watch": "tsc -w",
     "lint": "eslint . --ext .tsx,.ts,.js --ignore-path ../.eslintignore"
   },
   "devDependencies": {
+    "@lerna/describe-ref": "^4.0.0",
     "@types/yargs": "^17.0.5",
     "@xor/eslint-config": "^1.0.0-pre",
+    "execa": "^5.1.1",
     "yargs": "^17.2.1"
   }
 }
