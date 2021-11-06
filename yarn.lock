@@ -303,7 +303,7 @@
     "@lerna/listable" "4.0.0"
     "@lerna/output" "4.0.0"
 
-"@lerna/check-working-tree@4.0.0":
+"@lerna/check-working-tree@4.0.0", "@lerna/check-working-tree@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@lerna/check-working-tree/-/check-working-tree-4.0.0.tgz#257e36a602c00142e76082a19358e3e1ae8dbd58"
   integrity sha512-/++bxM43jYJCshBiKP5cRlCTwSJdRSxVmcDAXM+1oUewlZJVSVlnks5eO0uLxokVFvLhHlC5kHMc7gbVFPHv6Q==
