@@ -19,7 +19,11 @@
     "build": "lerna run build --stream",
     "clean": "lerna run clean --stream",
     "lint": "lerna run lint --stream",
-    "lint:commits": "commitlint"
+    "lint:commits": "xor lint-commits",
+    "verify": "run-s lint clean build lint:commits",
+    "premerge": "run-s verify",
+    "merge": "git merge --ff-only",
+    "postmerge": "xor version-packages"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
