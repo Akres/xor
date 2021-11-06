@@ -1,0 +1,21 @@
+{
+  "name": "@xor/cli",
+  "version": "1.0.0-pre",
+  "description": "Command line tools",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "xor": "./bin/xor.js"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "lint": "eslint . --ext .tsx,.ts,.js --ignore-path ../.eslintignore"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.5",
+    "@xor/eslint-config": "^1.0.0-pre",
+    "yargs": "^17.2.1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "@xor/typescript-config/react",
+  "include": [
+    "./src"
+  ],
+  "compilerOptions": {
+    "outDir": "./lib"
+  }
+}

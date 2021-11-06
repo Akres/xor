@@ -1,0 +1,11 @@
+{
+  "extends": "@xor/typescript-config",
+  "include": [
+    "./src"
+  ],
+  "compilerOptions": {
+    "outDir": "./lib",
+    "sourceMap": false,
+    "declaration": false
+  }
+}

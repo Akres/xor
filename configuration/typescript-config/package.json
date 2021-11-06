@@ -1,0 +1,13 @@
+{
+  "name": "@xor/typescript-config",
+  "version": "1.0.0-pre",
+  "description": "Base TypeScript configuration",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^16.11.6",
+    "typescript": "^4.4.4"
+  },
+  "tsconfig": "./index.json"
+}

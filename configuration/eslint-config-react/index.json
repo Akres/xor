@@ -1,0 +1,42 @@
+{
+    "extends": [
+        "plugin:jsx-a11y/recommended"
+    ],
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "react/display-name": "error",
+        "react/jsx-boolean-value": "error",
+        "react/jsx-equals-spacing": [
+            "error",
+            "never"
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/jsx-no-undef": "error",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-tag-spacing": "error",
+        "react/no-did-mount-set-state": "error",
+        "react/no-did-update-set-state": "error",
+        "react/no-multi-comp": "error",
+        "react/no-unknown-property": "error",
+        "react/prop-types": "error",
+        "react/react-in-jsx-scope": "error",
+        "react/self-closing-comp": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error"
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}

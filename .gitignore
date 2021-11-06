@@ -1,0 +1,6 @@
+.idea
+**/lib
+**/dist
+**/yarn-error.log
+**/node_modules
+lerna-debug.log

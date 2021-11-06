@@ -1,0 +1,14 @@
+{
+  "name": "@xor/eslint-config",
+  "version": "1.0.0-pre",
+  "description": "Base eslint configuration",
+  "main": "index.json",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "eslint-plugin-import": "^2.25.2"
+  }
+}
