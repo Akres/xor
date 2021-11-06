@@ -20,7 +20,8 @@
     "clean": "lerna run clean --stream",
     "lint": "lerna run lint --stream",
     "lint:commits": "xor lint-commits",
-    "verify": "run-s lint clean build lint:commits"
+    "verify": "run-s lint clean build lint:commits",
+    "merge": "xor merge -b"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
