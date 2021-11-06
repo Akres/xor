@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](/compare/@xor/cli@1.0.0...@xor/cli@1.1.0) (2021-11-06)
+
+
+### Features
+
+* **cli:** add versioning command 323b555
+
+
+
+
+
 # 1.0.0 (2021-11-06)
 
 
