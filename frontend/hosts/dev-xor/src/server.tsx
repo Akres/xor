@@ -1,4 +1,3 @@
-import React from "react";
 import {Request, Response, NextFunction} from "express";
 import path from "path";
 
