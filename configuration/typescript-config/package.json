@@ -1,6 +1,6 @@
 {
   "name": "@xor/typescript-config",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Base TypeScript configuration",
   "author": "Jiri Kantor",
   "license": "MIT",

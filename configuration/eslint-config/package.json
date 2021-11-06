@@ -1,6 +1,6 @@
 {
   "name": "@xor/eslint-config",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Base eslint configuration",
   "main": "index.json",
   "author": "Jiri Kantor",

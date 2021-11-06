@@ -1,6 +1,6 @@
 {
     "name": "@xor/commitlint-config",
-    "version": "1.0.0-pre",
+    "version": "1.0.0",
     "description": "Rules for commit lint.",
     "license": "UNLICENSED",
     "dependencies": {

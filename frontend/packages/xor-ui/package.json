@@ -1,6 +1,6 @@
 {
   "name": "@xor/ui",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Contains React and other components of the web UI",
   "main": "./lib/index.js",
   "author": "Jiri Kantor <mgrjirikantor@gmail.com>",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.34",
-    "@xor/eslint-config": "^1.0.0-pre",
-    "@xor/eslint-config-react": "^1.0.0-pre"
+    "@xor/eslint-config": "^1.0.0",
+    "@xor/eslint-config-react": "^1.0.0"
   }
 }
