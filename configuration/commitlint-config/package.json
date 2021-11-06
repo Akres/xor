@@ -1,0 +1,10 @@
+{
+    "name": "@xor/commitlint-config",
+    "version": "1.0.0-pre",
+    "description": "Rules for commit lint.",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@commitlint/config-conventional": "^13.0.0",
+        "@commitlint/config-lerna-scopes": "^13.0.0"
+    }
+}
