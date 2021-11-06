@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
     "@xor/cli": "^1.0.0-pre",
+    "@xor/commitlint-config": "^1.0.0-pre",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "lerna": "^4.0.0",
