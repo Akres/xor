@@ -13,8 +13,7 @@
     "cli"
   ],
   "scripts": {
-    "dev:start": "cross-env NODE_ENV=development run-s dev:build dev:run",
-    "dev:build": "lerna run build --scope @xor/dev-xor --include-dependencies --stream",
+    "dev:start": "cross-env NODE_ENV=development run-s dev:run",
     "dev:run": "lerna run watch --scope @xor/dev-xor --include-dependencies --parallel",
     "build": "lerna run build --stream",
     "clean": "lerna run clean --stream",
