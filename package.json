@@ -1,6 +1,6 @@
 {
-  "name": "purple",
-  "version": "1.0.0-pre",
+  "name": "xor",
+  "version": "1.0.0",
   "description": "A demonstration project for Purple Technologies",
   "main": "index.js",
   "author": "Jiri kantor <mgrjirikantor@gmail.com>",
