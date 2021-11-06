@@ -1,7 +1,7 @@
 const path = require("path");
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     target: "web",
@@ -22,6 +22,7 @@ module.exports = {
     optimization: {
         minimize: false
     },
+
     module: {
         rules: [
             {
@@ -36,20 +37,29 @@ module.exports = {
                 enforce: "pre"
             },
             {
-                test: /\.less$/,
-                use: "null-loader"
+                test: /\.(le|c)ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    "css-loader" ,
+                    "less-loader"
+                ]
             }
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
                 {from: path.join(__dirname, "assets"), to: path.join(__dirname, "dist")}
             ]
         }),
+        new MiniCssExtractPlugin({
+            filename: "styles.css"
+        }),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "src", "template.ejs")
+            template: path.join(__dirname, "src", "template.ejs"),
+            filename: path.join(__dirname, "dist", "index.html")
         })
     ]
 };
