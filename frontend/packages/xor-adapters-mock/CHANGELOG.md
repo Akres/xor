@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](/compare/@xor/xor-adapters-mock@1.0.0...@xor/xor-adapters-mock@2.0.0) (2021-11-07)
+
+
+### Features
+
+* **xor-adapters-mock:** rename package and uptake domain bdf87d2
+
+
+### BREAKING CHANGES
+
+* **xor-adapters-mock:** - package renamed
+
+
+
+
+
 # 1.0.0 (2021-11-07)
 
 

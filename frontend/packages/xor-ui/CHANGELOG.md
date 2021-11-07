@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](/compare/@xor/xor-ui@1.3.0...@xor/xor-ui@2.0.0) (2021-11-07)
+
+
+### Features
+
+* **xor-ui:** add state for exchange requests 3b19805
+
+
+### BREAKING CHANGES
+
+* **xor-ui:** - a big refactor
+
+
+
+
+
 # 1.3.0 (2021-11-07)
 
 

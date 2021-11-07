@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-ui",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Contains React and other components of the web UI",
   "main": "./lib/index.js",
   "author": "Jiri Kantor <mgrjirikantor@gmail.com>",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
-    "@xor/xor-domain": "^1.0.0",
+    "@xor/xor-domain": "^2.0.0",
     "classnames": "^2.3.1",
     "deep-freeze-strict": "^1.1.1",
     "react": "^17.0.2",
@@ -27,8 +27,8 @@
   "devDependencies": {
     "@types/deep-freeze-strict": "^1.1.0",
     "@types/react": "^17.0.34",
-    "@xor/eslint-config": "^1.0.0",
-    "@xor/eslint-config-react": "^1.0.0",
+    "@xor/eslint-config": "^1.1.0",
+    "@xor/eslint-config-react": "^1.1.0",
     "cpx": "^1.5.0",
     "typescript": "^4.4.4"
   }

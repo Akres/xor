@@ -1,6 +1,6 @@
 {
   "name": "@xor/eslint-config-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Eslint configuration extended for React",
   "main": "index.json",
   "author": "Jiri Kantor",

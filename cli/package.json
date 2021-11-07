@@ -1,6 +1,6 @@
 {
   "name": "@xor/cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Command line tools",
   "author": "Jiri Kantor",
   "license": "MIT",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@lerna/describe-ref": "^4.0.0",
     "@types/yargs": "^17.0.5",
-    "@xor/eslint-config": "^1.0.0",
+    "@xor/eslint-config": "^1.1.0",
     "execa": "^5.1.1",
     "yargs": "^17.2.1"
   }

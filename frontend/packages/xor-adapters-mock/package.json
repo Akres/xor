@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-adapters-mock",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Adapter for dev version of app - no network requests",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/sleep": "^0.0.8",
-    "@xor/xor-domain": "^1.0.0"
+    "@xor/xor-domain": "^2.0.0"
   },
   "dependencies": {
     "sleep-promise": "^8.0.1"
