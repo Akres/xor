@@ -1,5 +1,5 @@
-import {selectCurrencies} from "../rootSelectors";
-import {RootState} from "../RootState";
+import {selectCurrencies} from "../../state/rootSelectors";
+import {RootState} from "../../state/RootState";
 
 export function selectIsLoadingCurrencies(state: RootState) {
     return selectCurrencies(state)?.isLoading;

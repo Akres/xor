@@ -1,6 +1,6 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {Runtime} from "@xor/xor-domain";
-import {RootState} from "../RootState";
+import {RootState} from "../state/RootState";
 import {RuntimeThunk} from "./RuntimeThunk";
 
 export default function createRuntimeThunk<ReturnType, ParamType = void>(
@@ -10,6 +10,6 @@ export default function createRuntimeThunk<ReturnType, ParamType = void>(
     return createAsyncThunk<ReturnType, ParamType, {extra: Runtime; state: RootState}>(
         typePrefix,
         async (param: ParamType, thunkAPI) =>
-            payloadCreator(thunkAPI.extra, thunkAPI.getState(), param)
+            payloadCreator(thunkAPI.extra, thunkAPI.getState(), thunkAPI.dispatch, param)
     );
 }
