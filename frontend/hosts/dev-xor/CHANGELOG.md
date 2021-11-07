@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](/compare/@xor/dev-xor@1.1.0...@xor/dev-xor@1.2.0) (2021-11-07)
+
+
+### Features
+
+* **dev-xor:** add store creation ffa89a6
+
+
+
+
+
 # [1.1.0](/compare/@xor/dev-xor@1.0.2...@xor/dev-xor@1.1.0) (2021-11-06)
 
 

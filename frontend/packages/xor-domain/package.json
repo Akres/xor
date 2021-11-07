@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-domain",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Domain for API types",
   "author": "Jiri Kantor",
   "license": "MIT",
