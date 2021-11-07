@@ -1,5 +1,5 @@
 {
-  "name": "@xor/ui",
+  "name": "@xor/xor-ui",
   "version": "1.2.0",
   "description": "Contains React and other components of the web UI",
   "main": "./lib/index.js",
@@ -15,13 +15,20 @@
     "lint": "eslint . --ext .tsx,.ts,.js --ignore-path ../../../.eslintignore"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
+    "@xor/xor-domain": "^1.0.0-pre",
+    "deep-freeze-strict": "^1.1.1",
     "react": "^17.0.2",
-    "typescript": "^4.4.4"
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
+    "@types/deep-freeze-strict": "^1.1.0",
     "@types/react": "^17.0.34",
     "@xor/eslint-config": "^1.0.0",
     "@xor/eslint-config-react": "^1.0.0",
-    "cpx": "^1.5.0"
+    "cpx": "^1.5.0",
+    "typescript": "^4.4.4"
   }
 }
