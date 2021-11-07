@@ -19,8 +19,9 @@
     "clean": "lerna run clean --stream",
     "lint": "lerna run lint --stream",
     "lint:commits": "xor lint-commits",
-    "verify": "run-s lint clean build lint:commits",
-    "merge": "xor merge -b"
+    "verify": "run-s package:dedupe lint clean build lint:commits",
+    "merge": "xor merge -b",
+    "package:dedupe": "yarn-deduplicate -s fewer yarn.lock"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
@@ -30,7 +31,8 @@
     "eslint": "^7.32.0",
     "lerna": "^4.0.0",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "yarn-deduplicate": "^3.1.0"
   },
   "engines": {
     "node": "14.18.1",
