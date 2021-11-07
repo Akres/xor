@@ -10,7 +10,7 @@ module.exports = {
     stats: "minimal",
     context: __dirname,
 
-    entry: path.join(__dirname, "src", "client.tsx"),
+    entry: path.join(__dirname, "src", "client.ts"),
     output: {
         path: path.join(__dirname, "dist"),
         filename: "client.js",

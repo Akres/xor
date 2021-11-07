@@ -15,11 +15,15 @@
     "watch": "run-p watch:server watch:client"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
     "@types/react-dom": "^17.0.11",
-    "@xor/ui": "^1.2.0",
+    "@xor/xor-adapters-mock": "^1.0.0-pre",
+    "@xor/xor-ui": "^1.2.0",
     "express": "^4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "redux-thunk": "^2.4.0",
     "systemjs": "^6.11.0",
     "tslib": "^2.3.1"
   },
@@ -30,6 +34,7 @@
     "@types/webpack-env": "^1.16.3",
     "@xor/eslint-config": "^1.0.0",
     "@xor/eslint-config-react": "^1.0.0",
+    "@xor/xor-domain": "^1.0.0-pre",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^5.2.7",

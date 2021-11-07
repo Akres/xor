@@ -1,3 +1,3 @@
 {
-    "extends": ["@xor"]
+    "extends": ["@xor", "@xor/react"]
 }
