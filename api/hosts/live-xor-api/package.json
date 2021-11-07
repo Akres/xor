@@ -1,6 +1,6 @@
 {
   "name": "@xor/live-xor-api",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Host for live client. Particular client depends on configuration",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",

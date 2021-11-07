@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-client-mock",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Mock client",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",

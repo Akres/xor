@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-client-openexchangerates",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Client for communication with openexchangerates.org",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
