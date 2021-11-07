@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "clean": "rimraf ./lib"
+    "clean": "rimraf ./lib",
+    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
   },
   "devDependencies": {
     "@types/sleep": "^0.0.8",
