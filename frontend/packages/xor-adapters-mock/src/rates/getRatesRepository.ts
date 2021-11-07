@@ -1,10 +1,10 @@
 import {RatesRepository} from "@xor/xor-domain";
-import fetchRates from "./fetchRates";
 import fetchCurrencies from "./fetchCurrencies";
+import convert from "./convert";
 
 export default function getRatesRepository(): RatesRepository {
     return {
-        fetchRates,
+        convert,
         fetchCurrencies
     };
 }

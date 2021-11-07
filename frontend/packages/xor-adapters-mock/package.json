@@ -12,6 +12,10 @@
     "clean": "rimraf ./lib"
   },
   "devDependencies": {
+    "@types/sleep": "^0.0.8",
     "@xor/xor-domain": "^1.0.0"
+  },
+  "dependencies": {
+    "sleep-promise": "^8.0.1"
   }
 }
