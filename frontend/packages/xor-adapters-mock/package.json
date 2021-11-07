@@ -1,0 +1,17 @@
+{
+  "name": "@xor/xor-adapters-mock",
+  "version": "1.0.0-pre",
+  "description": "Adapter for dev version of app - no network requests",
+  "main": "./lib/index.js",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf ./lib"
+  },
+  "devDependencies": {
+    "@xor/xor-domain": "^1.0.0-pre"
+  }
+}
