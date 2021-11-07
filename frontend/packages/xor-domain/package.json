@@ -1,0 +1,14 @@
+{
+  "name": "@xor/xor-domain",
+  "version": "1.0.0-pre",
+  "description": "Domain for API types",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf ./lib"
+  }
+}
