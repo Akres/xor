@@ -1,0 +1,19 @@
+{
+  "name": "@xor/xor-api",
+  "version": "1.0.0-pre",
+  "description": "API server for the xor project",
+  "main": "./lib/index.js",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf ./lib",
+    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
+  },
+  "devDependencies": {
+    "@xor/eslint-config": "^1.1.0",
+    "@xor/typescript-config": "^1.0.0"
+  }
+}
