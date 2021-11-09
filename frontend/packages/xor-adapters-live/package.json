@@ -1,0 +1,21 @@
+{
+  "name": "@xor/xor-adapters-live",
+  "version": "1.0.0-pre",
+  "description": "Adapter for live version of xor app.",
+  "main": "./lib/index.js",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf ./lib",
+    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
+  },
+  "devDependencies": {
+    "@xor/xor-domain": "^2.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
