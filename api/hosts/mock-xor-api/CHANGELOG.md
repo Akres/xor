@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](/compare/@xor/mock-xor-api@1.0.0...@xor/mock-xor-api@1.1.0) (2021-11-09)
+
+
+### Features
+
+* **mock-xor-api:** add server start 0d77981
+
+
+
+
+
 # 1.0.0 (2021-11-07)
 
 

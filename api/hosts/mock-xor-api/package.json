@@ -1,6 +1,6 @@
 {
   "name": "@xor/mock-xor-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Host with mocked client",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -13,9 +13,9 @@
     "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
   },
   "dependencies": {
-    "@xor/xor-client-mock": "^1.0.0",
-    "@xor/xor-client-schema": "^1.0.0",
-    "@xor/xor-api": "^1.0.0"
+    "@xor/xor-api": "^1.1.0",
+    "@xor/xor-client-mock": "^1.1.0",
+    "@xor/xor-client-schema": "^1.1.0"
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",

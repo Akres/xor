@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-client-schema",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Schema of communication between api server and clients",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",

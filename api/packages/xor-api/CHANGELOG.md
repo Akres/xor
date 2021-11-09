@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](/compare/@xor/xor-api@1.0.0...@xor/xor-api@1.1.0) (2021-11-09)
+
+
+### Features
+
+* **xor-api:** add basic server start and currencies endpoint c7496c2
+
+
+
+
+
 # 1.0.0 (2021-11-07)
 
 
