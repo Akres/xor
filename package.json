@@ -15,6 +15,9 @@
   "scripts": {
     "dev:ui:start": "cross-env NODE_ENV=development run-s dev:ui:run",
     "dev:ui:run": "lerna run watch --scope @xor/dev-xor --include-dependencies --parallel",
+    "live:ui:start": "cross-env NODE_ENV=production run-s live:ui:build live:ui:run",
+    "live:ui:build": "lerna run build --scope @xor/live-xor --include-dependencies --parallel",
+    "live:ui:run": "lerna run start --scope @xor/live-xor --stream",
     "mock:api:start": "cross-env NODE_ENV=development run-s mock:api:build mock:api:run",
     "mock:api:build": "lerna run build --scope @xor/mock-xor-api --include-dependencies --parallel",
     "mock:api:run": "lerna run start --scope @xor/mock-xor-api --stream",
