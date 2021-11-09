@@ -10,7 +10,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "clean": "rimraf ./lib",
-    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
+    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore",
+    "fetch": "env-cmd -f ./env.json run-s fetch:do",
+    "fetch:do": "curl https://openexchangerates.org/api/latest.json -H \"Authorization: Token ${APP_ID}\""
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
