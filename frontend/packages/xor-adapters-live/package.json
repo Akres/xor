@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-adapters-live",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Adapter for live version of xor app.",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",

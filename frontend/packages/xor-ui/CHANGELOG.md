@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](/compare/@xor/xor-ui@2.0.1...@xor/xor-ui@2.1.0) (2021-11-09)
+
+
+### Features
+
+* **xor-ui:** add basic error handling 63c4bf9
+
+
+
+
+
 ## [2.0.1](/compare/@xor/xor-ui@2.0.0...@xor/xor-ui@2.0.1) (2021-11-07)
 
 **Note:** Version bump only for package @xor/xor-ui

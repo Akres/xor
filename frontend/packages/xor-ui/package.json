@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-ui",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Contains React and other components of the web UI",
   "main": "./lib/index.js",
   "author": "Jiri Kantor <mgrjirikantor@gmail.com>",
