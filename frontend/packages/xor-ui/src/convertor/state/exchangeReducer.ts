@@ -33,6 +33,12 @@ export default createReducer<ExchangeState>(
             })
             .addCase(convert.fulfilled, (state, {payload}) => {
                 state.items = payload;
+            })
+            .addCase(convert.rejected, (state ) => {
+                state.items = state.items.map(({currencyAmount}) => ({
+                    currencyAmount,
+                    isLoading: false
+                }));
             });
     }
 );

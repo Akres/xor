@@ -7,3 +7,7 @@ export function selectCurrencies(state: RootState) {
 export function selectExchange(state: RootState) {
     return state?.exchange;
 }
+
+export function selectError(state: RootState) {
+    return state?.error;
+}

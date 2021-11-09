@@ -1,10 +1,25 @@
 import React from "react";
-import Convertor from "./convertor/Convertor";
+import {connect} from "react-redux";
 import Stats from "./stats/Stats";
+import {RootState} from "./state/RootState";
+import {selectErrorMessage, selectHasError} from "./state/errorSelectors";
+import Convertor from "./convertor/Convertor";
+import ErrorDisplay from "./ErrorDisplay";
 
 import "./Main.less";
 
-export default function Main() {
+interface MainProps {
+    hasError: boolean;
+    errorMessage: string;
+}
+
+function Main({hasError, errorMessage}: MainProps) {
+    if (hasError) {
+        return (
+            <ErrorDisplay message={errorMessage} />
+        );
+    }
+
     return (
         <main role="main" className="main">
             <Convertor />
@@ -12,3 +27,18 @@ export default function Main() {
         </main>
     );
 }
+
+const mapDispatchToProps = {
+
+};
+
+function mapStateToProps(state: RootState) {
+    return {
+        hasError: selectHasError(state),
+        errorMessage: selectErrorMessage(state)
+    };
+}
+
+const enhance = connect(mapStateToProps, mapDispatchToProps);
+
+export default enhance(Main);
