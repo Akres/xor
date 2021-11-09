@@ -14,7 +14,7 @@ module.exports = {
         path.join(__dirname, "./src/index.ts")
     ],
     output: {
-        path: path.join(__dirname, "lib"),
+        path: path.join(__dirname, "dist"),
         filename: "server.js",
         libraryTarget: "commonjs2"
     },
