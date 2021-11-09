@@ -8,9 +8,14 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
+    "start": "webpack --config webpack.config.js",
     "clean": "rimraf ./lib",
     "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
+  },
+  "dependencies": {
+    "@xor/xor-client-mock": "^1.0.0",
+    "@xor/xor-client-schema": "^1.0.0",
+    "@xor/xor-api": "^1.0.0"
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
