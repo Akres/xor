@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-client-mock",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Mock client",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -15,6 +15,6 @@
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
-    "@xor/xor-client-schema": "^1.1.0"
+    "@xor/xor-client-schema": "^2.0.0"
   }
 }

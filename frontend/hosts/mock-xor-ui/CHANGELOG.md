@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2021-11-14)
+
+
+### Features
+
+* **mock-xor-ui:** rename package from dev-xor 0454003
+
+
+### BREAKING CHANGES
+
+* **mock-xor-ui:** - renamed package from dev-xor to mock-xor-ui
+
+
+
+
+
 ## [1.2.3](/compare/@xor/dev-xor@1.2.2...@xor/dev-xor@1.2.3) (2021-11-09)
 
 **Note:** Version bump only for package @xor/dev-xor

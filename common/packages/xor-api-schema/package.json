@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-api-schema",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Schema for communication between browser and api server",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](/compare/@xor/xor-api@1.1.0...@xor/xor-api@1.2.0) (2021-11-14)
+
+
+### Features
+
+* **xor-api:** use currency type from schema, add error logging 9fc8d36
+
+
+
+
+
 # [1.1.0](/compare/@xor/xor-api@1.0.0...@xor/xor-api@1.1.0) (2021-11-09)
 
 

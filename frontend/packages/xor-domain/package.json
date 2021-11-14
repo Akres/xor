@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-domain",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Domain for API types",
   "author": "Jiri Kantor",
   "license": "MIT",
@@ -13,6 +13,6 @@
     "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
   },
   "devDependencies": {
-    "@xor/xor-api-schema": "^1.0.0-pre"
+    "@xor/xor-api-schema": "^1.0.0"
   }
 }

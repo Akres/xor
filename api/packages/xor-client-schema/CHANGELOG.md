@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](/compare/@xor/xor-client-schema@1.1.0...@xor/xor-client-schema@2.0.0) (2021-11-14)
+
+
+### Features
+
+* **xor-client-schema:** use currencies type from api schema 1cc39f8
+
+
+### BREAKING CHANGES
+
+* **xor-client-schema:** - CurrencyInfo no longer exported
+
+
+
+
+
 # [1.1.0](/compare/@xor/xor-client-schema@1.0.0...@xor/xor-client-schema@1.1.0) (2021-11-09)
 
 
