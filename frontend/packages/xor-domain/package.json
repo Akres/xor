@@ -11,5 +11,8 @@
     "watch": "tsc -w",
     "clean": "rimraf ./lib",
     "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
+  },
+  "devDependencies": {
+    "@xor/xor-api-schema": "^1.0.0-pre"
   }
 }
