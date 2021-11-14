@@ -21,15 +21,13 @@
     "deep-freeze-strict": "^1.1.1",
     "react": "^17.0.2",
     "react-redux": "^7.2.6",
-    "redux": "^4.1.2",
-    "tslib": "^2.3.1"
+    "redux": "^4.1.2"
   },
   "devDependencies": {
     "@types/deep-freeze-strict": "^1.1.0",
     "@types/react": "^17.0.34",
     "@xor/eslint-config": "^1.1.0",
     "@xor/eslint-config-react": "^1.1.0",
-    "cpx": "^1.5.0",
-    "typescript": "^4.4.4"
+    "cpx": "^1.5.0"
   }
 }
