@@ -2,10 +2,20 @@ import {createReducer} from "@reduxjs/toolkit";
 import deepFreeze from "deep-freeze-strict";
 import {ExchangeState} from "./ExchangeState";
 
-import {convert, initializeExchangeItems, setExchangeItem} from "./exchangeActions";
+import {
+    addTargetItem,
+    convertBaseToAll, convertTarget,
+    initializeExchangeItems, removeTargetItem,
+    setBaseCurrencyAmount,
+    setTargetCurrency, swapTargetItem
+} from "./exchangeActions";
 
 const initialState = deepFreeze({
-    items: []
+    baseCurrencyAmount: {
+        code: "XXX",
+        amount: 0
+    },
+    targetItems: []
 } as ExchangeState);
 
 export default createReducer<ExchangeState>(
@@ -13,32 +23,73 @@ export default createReducer<ExchangeState>(
     (builder) => {
         builder
             .addCase(initializeExchangeItems, (state, {payload}) => {
-                state.items = payload.slice(0, 2).map((currency) => ({
+                const baseCurrency = payload[0];
+                const targetCurrency = payload[1];
+                state.baseCurrencyAmount = {
+                    code: baseCurrency.code,
+                    amount: 0
+                };
+                state.targetItems = [{
                     isLoading: false,
                     currencyAmount: {
-                        code: currency.code,
+                        code: targetCurrency.code,
                         amount: 0
                     }
-                }));
+                }];
             })
-            .addCase(setExchangeItem, (state, {payload}) => {
-                state.items[payload.itemIndex] = {isLoading: false, currencyAmount: payload.currencyAmount};
+            .addCase(setBaseCurrencyAmount, (state, {payload}) => {
+                state.baseCurrencyAmount = payload;
             })
-            .addCase(convert.pending, (state, action) => {
-                const itemIndex = action.meta.arg;
-                state.items = state.items.map((item, i) => ({
+            .addCase(setTargetCurrency, (state, {payload: {targetIndex, currency}}) => {
+                state.targetItems[targetIndex].currencyAmount.code = currency.code;
+            })
+            .addCase(addTargetItem, (state) => {
+                state.targetItems.push(state.targetItems[state.targetItems.length - 1]);
+            })
+            .addCase(swapTargetItem, (state, {payload: targetIndex}) => {
+                const item = state.targetItems[targetIndex];
+                state.targetItems[targetIndex] = {
+                    isLoading: false,
+                    currencyAmount: state.baseCurrencyAmount
+                };
+                state.baseCurrencyAmount = item.currencyAmount;
+            })
+            .addCase(removeTargetItem, (state, {payload: targetIndex}) => {
+                state.targetItems = state.targetItems.filter((item, i) => i !== targetIndex);
+            })
+            .addCase(convertBaseToAll.pending, (state) => {
+                state.targetItems = state.targetItems.map((item) => ({
                     ...item,
-                    isLoading: i !== itemIndex
+                    isLoading: true
                 }));
             })
-            .addCase(convert.fulfilled, (state, {payload}) => {
-                state.items = payload;
+            .addCase(convertBaseToAll.fulfilled, (state, {payload}) => {
+                state.targetItems = payload.map((item) => ({
+                    ...item,
+                    isLoading: false
+                }));
             })
-            .addCase(convert.rejected, (state ) => {
-                state.items = state.items.map(({currencyAmount}) => ({
+            .addCase(convertBaseToAll.rejected, (state ) => {
+                state.targetItems = state.targetItems.map(({currencyAmount}) => ({
                     currencyAmount,
                     isLoading: false
                 }));
+            })
+            .addCase(convertTarget.pending, (state, action) => {
+                const targetIndex = action.meta.arg;
+                state.targetItems[targetIndex].isLoading = true;
+            })
+            .addCase(convertTarget.fulfilled, (state, action) => {
+                const targetIndex = action.meta.arg;
+                const currencyAmount = action.payload;
+                state.targetItems[targetIndex] = {
+                    isLoading: false,
+                    currencyAmount
+                };
+            })
+            .addCase(convertTarget.rejected, (state, action) => {
+                const targetIndex = action.meta.arg;
+                state.targetItems[targetIndex].isLoading = false;
             });
     }
 );

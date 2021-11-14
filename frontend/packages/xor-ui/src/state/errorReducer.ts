@@ -2,7 +2,7 @@ import {createReducer} from "@reduxjs/toolkit";
 import {ErrorState} from "./ErrorState";
 import deepFreeze from "deep-freeze-strict";
 import {getCurrencies} from "../convertor/state/currenciesActions";
-import {convert} from "../convertor/state/exchangeActions";
+import {convertBaseToAll, convertTarget} from "../convertor/state/exchangeActions";
 
 const initialState: ErrorState = deepFreeze({
     hasError: false,
@@ -17,7 +17,11 @@ export default createReducer<ErrorState>(
                 state.hasError = true;
                 state.message = error.message || "Unknown error";
             })
-            .addCase(convert.rejected, (state, {error}) => {
+            .addCase(convertBaseToAll.rejected, (state, {error}) => {
+                state.hasError = true;
+                state.message = error.message || "Unknown error";
+            })
+            .addCase(convertTarget.rejected, (state, {error}) => {
                 state.hasError = true;
                 state.message = error.message || "Unknown error";
             });

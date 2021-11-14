@@ -1,14 +1,18 @@
 import {createAction} from "@reduxjs/toolkit";
-import createRuntimeThunk from "../../utils/createRuntimeThunk";
-import {selectExchangeItem, selectExchangeItems} from "./exchangeSelectors";
 import {Currency, CurrencyAmount} from "@xor/xor-domain";
+import createRuntimeThunk from "../../utils/createRuntimeThunk";
 import {ExchangeItem} from "./ExchangeItem";
+import {selectBaseCurrencyAmount, selectTargetItems} from "./exchangeSelectors";
 
 export const initializeExchangeItems = createAction<Currency[]>("exchange/initialize");
-export const setExchangeItem =
-    createAction<{itemIndex: number; currencyAmount: CurrencyAmount}>("exchange/updateExchangeItem");
+export const setBaseCurrencyAmount =
+    createAction<CurrencyAmount>("exchange/setBaseCurrencyAmount");
+export const setTargetCurrency = createAction<{targetIndex: number; currency: Currency}>("exchange/setTargetCurrency");
+export const swapTargetItem = createAction<number>("exchange/swapTargetItem");
+export const removeTargetItem = createAction<number>("exchange/removeTargetItem");
+export const addTargetItem = createAction("exchange/addTargetItem");
 
-function createItemsWithNewValues(oldItems: ExchangeItem[], convertedAmounts: CurrencyAmount[]): ExchangeItem[] {
+function createItemsWithNewAmounts(oldItems: ExchangeItem[], convertedAmounts: CurrencyAmount[]): ExchangeItem[] {
     const amountMap = new Map<string, number>(
         convertedAmounts.map(
             ({code, amount}) => [code, amount]
@@ -24,32 +28,39 @@ function createItemsWithNewValues(oldItems: ExchangeItem[], convertedAmounts: Cu
     }));
 }
 
-export const convert = createRuntimeThunk<ExchangeItem[], number>(
-    "exchange/convert",
-    async function (runtime, state, _, itemIndex?: number) {
-        if (itemIndex === undefined) {
-            throw new Error("Uknown item.");
-        }
-        const itemToConvertFrom = selectExchangeItem(state, itemIndex);
-        if (!itemToConvertFrom) {
-            throw new Error("Uknown exchange item to convert from.");
-        }
-
-        const otherItems = selectExchangeItems(state).filter((_, index) => index != itemIndex);
-
-        const targetCurrencies = otherItems.map(({currencyAmount}) => currencyAmount.code);
-        const {amount: baseAmount, code: baseCurrency} = itemToConvertFrom.currencyAmount;
-
-        console.log("Will convert", baseAmount, baseCurrency, "to", targetCurrencies);
+export const convertBaseToAll = createRuntimeThunk<ExchangeItem[]>(
+    "exchange/convertBaseToAll",
+    async function (runtime, state) {
+        const baseAmount = selectBaseCurrencyAmount(state);
+        const targetItems = selectTargetItems(state);
+        const targetCurrencies = targetItems.map((item) => item.currencyAmount.code);
 
         const ratesRepository = runtime.getRatesRepository();
-        const convertedAmounts = await ratesRepository.convert(baseAmount, baseCurrency, targetCurrencies);
-        const convertedItems = createItemsWithNewValues(otherItems, convertedAmounts);
+        const convertedAmounts = await ratesRepository.convert(baseAmount.amount, baseAmount.code, targetCurrencies);
+        return createItemsWithNewAmounts(targetItems, convertedAmounts);
+    }
+);
 
-        return [
-            ...convertedItems.slice(0, itemIndex),
-            itemToConvertFrom,
-            ...convertedItems.slice(itemIndex)
-        ];
+export const convertTarget = createRuntimeThunk<CurrencyAmount, number>(
+    "exchange/convertTarget",
+    async function (runtime, state, _, targetIndex) {
+        if (targetIndex === undefined) {
+            throw new Error("Cannot convert item with undefined index");
+        }
+        const baseCurrencyAmount = selectBaseCurrencyAmount(state);
+        const targetItems = selectTargetItems(state);
+        const targetItem = targetItems?.[targetIndex];
+        if (!targetItem) {
+            throw new Error(`Cannot convert item with index ${targetIndex}`);
+        }
+        const targetCurrency = targetItem.currencyAmount.code;
+
+        const ratesRepository = runtime.getRatesRepository();
+        const convertedAmounts = await ratesRepository.convert(
+            baseCurrencyAmount.amount,
+            baseCurrencyAmount.code,
+            [targetCurrency]
+        );
+        return convertedAmounts[0]; // Will get only one result
     }
 );

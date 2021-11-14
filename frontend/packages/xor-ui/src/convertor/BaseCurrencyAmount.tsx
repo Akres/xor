@@ -1,14 +1,11 @@
 import React, {ChangeEvent, FormEvent, useEffect, useState} from "react";
 import classNames from "classnames";
 import {Currency, CurrencyAmount} from "@xor/xor-domain";
-import {ExchangeItem} from "./state/ExchangeItem";
 
-import "./CurrencyAmountSelector.less";
-
-interface CurrencyAmountProps {
+interface BaseCurrencyAmountProps {
     currencies: Currency[];
     onCurrencyAmountChanged: (currencyAmount: CurrencyAmount) => void;
-    exchangeItem: ExchangeItem;
+    currencyAmount: CurrencyAmount;
 }
 
 function getValidAmountOrNull(str: string): number | null {
@@ -18,22 +15,22 @@ function getValidAmountOrNull(str: string): number | null {
         : null;
 }
 
-export default function CurrencyAmountSelector({
+export default function BaseCurrencyAmount({
     currencies,
     onCurrencyAmountChanged,
-    exchangeItem
-}: CurrencyAmountProps) {
+    currencyAmount
+}: BaseCurrencyAmountProps) {
 
     const [isValid, setIsValid] = useState(true);
     const [value, setValue] = useState("0");
 
     useEffect(
         function setValueFromStore() {
-            const newAmount = exchangeItem.currencyAmount.amount;
+            const newAmount = currencyAmount.amount;
             setIsValid(true);
             setValue(newAmount.toString());
         },
-        [exchangeItem.currencyAmount.amount]
+        [currencyAmount.amount]
     );
 
 
@@ -47,40 +44,30 @@ export default function CurrencyAmountSelector({
             setIsValid(true);
             onCurrencyAmountChanged({
                 amount: newAmount,
-                code: exchangeItem.currencyAmount.code
+                code: currencyAmount.code
             });
         }
     }
 
     function handleSelectCurrency(event: ChangeEvent<HTMLSelectElement>) {
         onCurrencyAmountChanged({
-            ...exchangeItem.currencyAmount,
+            ...currencyAmount,
             code: event.currentTarget.value
         });
     }
 
     return(
         <div className="input-group input-group-md" >
-            {!exchangeItem.isLoading &&
-                <input
-                    type="text"
-                    className={classNames("form-control", {"is-invalid": !isValid})}
-                    onInput={handleInputAmount}
-                    required
-                    value={value}
-                />
-            }
-            {exchangeItem.isLoading &&
-                <div
-                    className="form-control currency-amount-selector__loading-input override"
-                    onInput={handleInputAmount}
-                >
-                    <span className="spinner-grow spinner-grow-sm" role="status" />
-                </div>
-            }
+            <input
+                type="text"
+                className={classNames("form-control", "w-50", {"is-invalid": !isValid})}
+                onInput={handleInputAmount}
+                required
+                value={value}
+            />
             <select
-                className="form-select currency-selector"
-                value={exchangeItem.currencyAmount.code}
+                className="form-select currency-selector w-50"
+                value={currencyAmount.code}
                 onChange={handleSelectCurrency}
             >
                 {currencies.map(({code, name}) => (

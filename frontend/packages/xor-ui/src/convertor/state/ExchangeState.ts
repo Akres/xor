@@ -1,5 +1,7 @@
+import {CurrencyAmount} from "@xor/xor-api-schema";
 import {ExchangeItem} from "./ExchangeItem";
 
 export interface ExchangeState {
-    items: ExchangeItem[];
+    baseCurrencyAmount: CurrencyAmount;
+    targetItems: ExchangeItem[];
 }

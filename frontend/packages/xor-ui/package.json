@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf ./lib",
     "build": "run-s lib:build style:copy",
     "lib:build": "tsc",
     "style:copy": "cpx \"./src/**/*.less\" \"./lib\" --verbose",
