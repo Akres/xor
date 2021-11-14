@@ -1,7 +1,7 @@
+import {Currency} from "@xor/xor-client-schema";
 import currencies from "./currencies.json";
-import {CurrencyInfo} from "@xor/xor-client-schema";
 
-export default function getCurrencies(): Promise<CurrencyInfo[]> {
+export default function getCurrencies(): Promise<Currency[]> {
     return Promise.resolve(
         Object.entries(currencies).map(([code, name]) => ({code, name}))
     );
