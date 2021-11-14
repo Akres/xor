@@ -8,8 +8,20 @@ export const initializeExchangeItems = createAction<Currency[]>("exchange/initia
 export const setExchangeItem =
     createAction<{itemIndex: number; currencyAmount: CurrencyAmount}>("exchange/updateExchangeItem");
 
-function createExchangeItem(currencyAmount: CurrencyAmount): ExchangeItem {
-    return {isLoading: false, currencyAmount};
+function createItemsWithNewValues(oldItems: ExchangeItem[], convertedAmounts: CurrencyAmount[]): ExchangeItem[] {
+    const amountMap = new Map<string, number>(
+        convertedAmounts.map(
+            ({code, amount}) => [code, amount]
+        )
+    );
+    return oldItems.map(({currencyAmount}) => ({
+        isLoading: false,
+        currencyAmount: {
+            code: currencyAmount.code,
+            // All the currencies that are in the original array are also in the new one, so we should not get undefined
+            amount: amountMap.get(currencyAmount.code) as number
+        }
+    }));
 }
 
 export const convert = createRuntimeThunk<ExchangeItem[], number>(
@@ -32,11 +44,12 @@ export const convert = createRuntimeThunk<ExchangeItem[], number>(
 
         const ratesRepository = runtime.getRatesRepository();
         const convertedAmounts = await ratesRepository.convert(baseAmount, baseCurrency, targetCurrencies);
+        const convertedItems = createItemsWithNewValues(otherItems, convertedAmounts);
 
         return [
-            ...convertedAmounts.slice(0, itemIndex).map(createExchangeItem),
+            ...convertedItems.slice(0, itemIndex),
             itemToConvertFrom,
-            ...convertedAmounts.slice(itemIndex).map(createExchangeItem)
+            ...convertedItems.slice(itemIndex)
         ];
     }
 );
