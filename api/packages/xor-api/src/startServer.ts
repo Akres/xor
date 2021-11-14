@@ -1,15 +1,19 @@
 import express, {Request, Response, NextFunction} from "express";
+import morgan from "morgan";
 import {Runtime} from "./Runtime";
 import {ShutdownCallback} from "./ShutdownCallback";
 import handleCurrenciesRequest from "./handlers/handleCurrenciesRequest";
+import handleConvertRequest from "./handlers/handleConvertRequest";
 
 const port = "3333";
 
 export default function startServer(runtime: Runtime): ShutdownCallback {
     const app = express();
-    app.use(express.json());
+
+    app.use(morgan("combined"));
 
     app.get("/currencies", handleCurrenciesRequest.bind(null, runtime));
+    app.get("/convert", handleConvertRequest.bind(null, runtime));
 
     app.use(function (err: Error, req: Request, res: Response, next: NextFunction) {
         console.error(err);

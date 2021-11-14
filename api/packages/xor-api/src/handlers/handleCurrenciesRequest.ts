@@ -8,8 +8,8 @@ export default async function handleCurrenciesRequest(
     response: Response,
     next: NextFunction
 ) {
-    const client = runtime.getExchangeRatesClient();
     try {
+        const client = runtime.getExchangeRatesClient();
         const currencies = await client.getCurrencies();
         response.status(200);
         response.send(serializeCurrencyList({currencies}));
