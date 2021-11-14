@@ -1,7 +1,7 @@
 {
   "name": "@xor/xor-client-schema",
   "version": "1.1.0",
-  "description": "Schema of communication between api server and clients",
+  "description": "Schema for api client, i.e. what the client must follow to be plugged to the API server.",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
   "license": "MIT",
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
-    "@xor/typescript-config": "^1.0.0"
+    "@xor/typescript-config": "^1.0.0",
+    "@xor/xor-api-schema": "^1.0.0-pre"
   }
 }
