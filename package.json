@@ -10,16 +10,17 @@
     "configuration/*",
     "frontend/**",
     "api/**",
+    "common/**",
     "cli"
   ],
   "scripts": {
     "dev:ui:start": "cross-env NODE_ENV=development run-s dev:ui:run",
-    "dev:ui:run": "lerna run watch --scope @xor/dev-xor --include-dependencies --parallel",
+    "dev:ui:run": "lerna run watch --scope @xor/mock-xor-ui --include-dependencies --stream",
     "live:ui:start": "cross-env NODE_ENV=production run-s live:ui:build live:ui:run",
-    "live:ui:build": "lerna run build --scope @xor/live-xor --include-dependencies --parallel",
-    "live:ui:run": "lerna run start --scope @xor/live-xor --stream",
+    "live:ui:build": "lerna run build --scope @xor/live-xor-ui --include-dependencies --stream",
+    "live:ui:run": "lerna run start --scope @xor/live-xor-ui --stream",
     "mock:api:start": "cross-env NODE_ENV=development run-s mock:api:build mock:api:run",
-    "mock:api:build": "lerna run build --scope @xor/mock-xor-api --include-dependencies --parallel",
+    "mock:api:build": "lerna run build --scope @xor/mock-xor-api --include-dependencies --stream",
     "mock:api:run": "lerna run start --scope @xor/mock-xor-api --stream",
     "build": "lerna run build --stream",
     "clean": "lerna run clean --stream",
@@ -39,7 +40,12 @@
     "lerna": "^4.0.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4",
     "yarn-deduplicate": "^3.1.0"
+  },
+  "resolutions": {
+    "typescript": "^4.4.4"
   },
   "engines": {
     "node": "14.18.1",
