@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "xor/currency-amount-list.schema.json",
+    "type": "object",
+    "properties": {
+        "amounts": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/currency-amount"
+            }
+        },
+    },
+    "required": ["amounts"],
+    "definitions": {
+        "currency-amount": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "description": "ISO 3 letter code of the currency",
+                    "type": "string"
+                },
+                "amount": {
+                    "description": "Amount of money in the specified currency",
+                    "type": "number"
+                }
+            },
+            "required": ["code", "amount"]
+        }
+    }
+}
