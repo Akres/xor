@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "xor/currencies.schema.json",
+    "type": "object",
+    "properties": {
+        "currencies": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/currency"
+            }
+        },
+    },
+    "required": ["currencies"],
+    "definitions": {
+        "currency": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "description": "ISO 3 letter code of the currency",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Human readable name of the currency",
+                    "type": "string"
+                }
+            },
+            "required": ["code"]
+        }
+    }
+}

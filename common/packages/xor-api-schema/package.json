@@ -1,0 +1,22 @@
+{
+  "name": "@xor/xor-api-schema",
+  "version": "1.0.0-pre",
+  "description": "Schema for communication between browser and api server",
+  "main": "./lib/index.js",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "run-s generate:currencies lib:build",
+    "lib:build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf ./lib",
+    "lint": "eslint . --ext .ts,.js --ignore-path .eslintignore",
+    "generate:currencies": "quicktype ./src/currencies/currency-list.json -s schema -o ./src/currencies/generated.ts -t CurrencyList"
+  },
+  "devDependencies": {
+    "@xor/eslint-config": "^1.1.0",
+    "@xor/typescript-config": "^1.0.0",
+    "quicktype": "^15.0.260"
+  }
+}
