@@ -1,4 +1,5 @@
 import {NextFunction, Request, Response} from "express";
+import {serializeCurrencyList} from "@xor/xor-api-schema";
 import {Runtime} from "../Runtime";
 
 export default async function handleCurrenciesRequest(
@@ -11,7 +12,7 @@ export default async function handleCurrenciesRequest(
     try {
         const currencies = await client.getCurrencies();
         response.status(200);
-        response.send(currencies);
+        response.send(serializeCurrencyList({currencies}));
     } catch(e) {
         next(e);
     }
