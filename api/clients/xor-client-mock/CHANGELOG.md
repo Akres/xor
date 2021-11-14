@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](/compare/@xor/xor-client-mock@1.1.1...@xor/xor-client-mock@1.2.0) (2021-11-14)
+
+
+### Features
+
+* **xor-client-mock:** add exchange rates by recalculating usd 652c61a
+
+
+
+
+
 ## [1.1.1](/compare/@xor/xor-client-mock@1.1.0...@xor/xor-client-mock@1.1.1) (2021-11-14)
 
 **Note:** Version bump only for package @xor/xor-client-mock
