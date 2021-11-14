@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](/compare/@xor/xor-ui@2.2.0...@xor/xor-ui@2.3.0) (2021-11-14)
+
+
+### Features
+
+* **xor-ui:** rework ui to support multiple currencies d5e08bb
+
+
+
+
+
 # [2.2.0](/compare/@xor/xor-ui@2.1.1...@xor/xor-ui@2.2.0) (2021-11-14)
 
 
