@@ -16,6 +16,7 @@
     "@xor/xor-domain": "^2.0.1"
   },
   "dependencies": {
+    "@xor/xor-api-schema": "^1.0.0-pre",
     "axios": "^0.24.0"
   }
 }
