@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](/compare/@xor/xor-api@1.3.0...@xor/xor-api@1.3.1) (2021-11-17)
+
+**Note:** Version bump only for package @xor/xor-api
+
+
+
+
+
 # [1.3.0](/compare/@xor/xor-api@1.2.0...@xor/xor-api@1.3.0) (2021-11-14)
 
 
