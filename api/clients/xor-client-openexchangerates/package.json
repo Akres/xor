@@ -16,7 +16,8 @@
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
     "@xor/xor-api-cache": "^1.2.0",
-    "@xor/xor-client-domain": "^3.0.1"
+    "@xor/xor-client-domain": "^3.0.1",
+    "@xor/xor-config": "^1.0.0-pre"
   },
   "dependencies": {
     "axios": "^0.24.0"

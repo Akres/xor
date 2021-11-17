@@ -1,7 +1,9 @@
 import {Axios} from "axios";
 import {CurrencyRates} from "@xor/xor-client-domain";
+import {config} from "@xor/xor-config";
 import parseExchangeRates from "./schema/parseExchangeRates";
 import {ExchangeRates} from "./schema/ExchangeRates";
+import {booleanToParam} from "./booleanToParam";
 
 function toCurrencyRates(exchangeRates: ExchangeRates): CurrencyRates {
     return {
@@ -18,10 +20,10 @@ export default async function fetchUsdExchangeRates(apiClient: Axios): Promise<C
         "latest.json",
         {
             params: {
-                app_id: process.env["XOR_API_OPENEXCHANGERATES_APP_ID"],
+                app_id: config.api.openexchangerates.appId,
                 base: "USD",
                 prettyprint: 0,
-                show_alternative: 0
+                show_alternative: booleanToParam(config.api.useAlternativeCurrencies)
             }
         }
     );
