@@ -1,5 +1,5 @@
 {
-  "name": "@xor/xor-client-schema",
+  "name": "@xor/xor-client-domain",
   "version": "2.0.1",
   "description": "Schema for api client, i.e. what the client must follow to be plugged to the API server.",
   "main": "./lib/index.js",
