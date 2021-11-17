@@ -1,7 +1,8 @@
 import express, {Request, Response, NextFunction} from "express";
+import {config} from "@xor/xor-config";
 
 const app = express();
-const port = 3000;
+const port = config.frontend.port;
 
 let server = require("./server").default;
 
