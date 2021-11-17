@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-ui",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "Contains React and other components of the web UI",
   "main": "./lib/index.js",
   "author": "Jiri Kantor <mgrjirikantor@gmail.com>",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
-    "@xor/xor-domain": "^2.0.4",
+    "@xor/xor-domain": "^2.1.0",
     "classnames": "^2.3.1",
     "deep-freeze-strict": "^1.1.1",
     "react": "^17.0.2",

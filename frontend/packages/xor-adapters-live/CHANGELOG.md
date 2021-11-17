@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](/compare/@xor/xor-adapters-live@1.2.2...@xor/xor-adapters-live@1.3.0) (2021-11-17)
+
+
+### Features
+
+* **xor-adapters-live:** add stats bbe6d3c
+
+
+
+
+
 ## [1.2.2](/compare/@xor/xor-adapters-live@1.2.1...@xor/xor-adapters-live@1.2.2) (2021-11-17)
 
 **Note:** Version bump only for package @xor/xor-adapters-live

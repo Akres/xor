@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](/compare/@xor/xor-adapters-mock@2.0.4...@xor/xor-adapters-mock@2.1.0) (2021-11-17)
+
+
+### Features
+
+* **xor-adapters-mock:** add stats 0b69f29
+
+
+
+
+
 ## [2.0.4](/compare/@xor/xor-adapters-mock@2.0.3...@xor/xor-adapters-mock@2.0.4) (2021-11-17)
 
 **Note:** Version bump only for package @xor/xor-adapters-mock
