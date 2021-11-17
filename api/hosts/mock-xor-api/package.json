@@ -1,6 +1,6 @@
 {
   "name": "@xor/mock-xor-api",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Host with mocked client",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@xor/xor-api": "^1.3.2",
-    "@xor/xor-api-cache": "^1.1.0",
+    "@xor/xor-api-cache": "^1.2.0",
     "@xor/xor-client-mock": "^1.3.0"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-client-openexchangerates",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Client for communication with openexchangerates.org",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -15,8 +15,8 @@
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
-    "@xor/xor-client-domain": "^3.0.1",
-    "@xor/xor-api-cache": "^1.1.0"
+    "@xor/xor-api-cache": "^1.2.0",
+    "@xor/xor-client-domain": "^3.0.1"
   },
   "dependencies": {
     "axios": "^0.24.0"
