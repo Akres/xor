@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-config",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Package for loading configuration from env variables",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",

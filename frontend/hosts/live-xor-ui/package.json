@@ -1,6 +1,6 @@
 {
   "name": "@xor/live-xor-ui",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Live host for the Xor app.",
   "main": "index.json",
   "author": "Jiri Kantor",
@@ -17,9 +17,9 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
     "@types/react-dom": "^17.0.11",
-    "@xor/xor-adapters-live": "^1.2.0",
+    "@xor/xor-adapters-live": "^1.2.1",
+    "@xor/xor-config": "^1.0.0",
     "@xor/xor-ui": "^2.3.0",
-    "@xor/xor-config": "^1.0.0-pre",
     "express": "^4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
