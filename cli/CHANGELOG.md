@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](/compare/@xor/cli@1.2.1...@xor/cli@1.3.0) (2021-11-17)
+
+
+### Features
+
+* **cli:** check there are no changes in working tree after verify fb9af07
+
+
+
+
+
 ## [1.2.1](/compare/@xor/cli@1.2.0...@xor/cli@1.2.1) (2021-11-07)
 
 **Note:** Version bump only for package @xor/cli
