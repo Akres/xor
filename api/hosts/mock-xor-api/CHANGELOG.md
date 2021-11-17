@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](/compare/@xor/mock-xor-api@1.1.3...@xor/mock-xor-api@1.2.0) (2021-11-17)
+
+
+### Features
+
+* **mock-xor-api:** use cached client 23e44cc
+
+
+
+
+
 ## [1.1.3](/compare/@xor/mock-xor-api@1.1.2...@xor/mock-xor-api@1.1.3) (2021-11-17)
 
 **Note:** Version bump only for package @xor/mock-xor-api
