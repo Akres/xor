@@ -13,7 +13,7 @@ function recalculateRates(targetCurrency: string): CurrencyRates {
 
     return {
         baseCurrency: targetCurrency,
-        validUntil: Math.floor(new Date().getTime() / 1000),
+        validUntil: Date.now() + 10 * 1000, // Validity of 10 seconds for testing
         rates: Object.fromEntries(
             Object
                 .entries(exchangeRatesUsd.rates)
@@ -25,5 +25,6 @@ function recalculateRates(targetCurrency: string): CurrencyRates {
 }
 
 export default function getExchangeRates(baseCurrency: string): Promise<CurrencyRates> {
+    console.log(`Fetching exchange rates for ${baseCurrency} from service.`);
     return Promise.resolve(recalculateRates(baseCurrency));
 }
