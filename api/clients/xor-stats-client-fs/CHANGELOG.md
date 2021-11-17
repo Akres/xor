@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2021-11-17)
+
+
+### Features
+
+* **xor-stats-client-fs:** introduce package 17ecae8
+
+
+
+
+
 # [1.3.0](/compare/@xor/xor-client-mock@1.2.1...@xor/xor-client-mock@1.3.0) (2021-11-17)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-api-cache",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Cache for exchange rates and currencies",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -15,6 +15,6 @@
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
-    "@xor/xor-client-domain": "^3.0.1"
+    "@xor/xor-client-domain": "^3.0.2"
   }
 }

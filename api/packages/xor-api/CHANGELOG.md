@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](/compare/@xor/xor-api@1.3.3...@xor/xor-api@1.4.0) (2021-11-17)
+
+
+### Features
+
+* **xor-api:** add stats endpoint and conversion logging 2bd2092
+
+
+
+
+
 ## [1.3.3](/compare/@xor/xor-api@1.3.2...@xor/xor-api@1.3.3) (2021-11-17)
 
 **Note:** Version bump only for package @xor/xor-api

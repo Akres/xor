@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-stats-client-mock",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Stats client that produces mocked stats data",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -15,6 +15,6 @@
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
-    "@xor/xor-stats-client-domain": "^1.0.0-pre"
+    "@xor/xor-stats-client-domain": "^1.0.0"
   }
 }
