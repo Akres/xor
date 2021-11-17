@@ -1,11 +1,12 @@
 import express, {Request, Response, NextFunction} from "express";
 import morgan from "morgan";
+import {config} from "@xor/xor-config";
 import {Runtime} from "./Runtime";
 import {ShutdownCallback} from "./ShutdownCallback";
 import handleCurrenciesRequest from "./handlers/handleCurrenciesRequest";
 import handleConvertRequest from "./handlers/handleConvertRequest";
 
-const port = "3333";
+const port = config.api.port;
 
 export default function startServer(runtime: Runtime): ShutdownCallback {
     const app = express();
