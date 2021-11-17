@@ -11,5 +11,6 @@ export interface Config {
         };
         useAlternativeCurrencies: boolean;
         useInactiveCurrencies: boolean;
+        statsDataFilePath: string;
     };
 }

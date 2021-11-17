@@ -8,7 +8,8 @@ const config: Config = {
             apiUrl: "https://openexchangerates.org/api"
         },
         useAlternativeCurrencies: false,
-        useInactiveCurrencies: false
+        useInactiveCurrencies: false,
+        statsDataFilePath: "./stats-data/stats.json"
     },
     frontend: {
         port: 3000,
