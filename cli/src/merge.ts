@@ -24,6 +24,7 @@ export default async function merge(branch?: string) {
     console.log(`Will merge branch ${actualBranch} to master`);
 
     await exec("yarn", ["verify"], {stdio: "inherit"});
+    await checkWorkingTree();
 
     await exec("git", ["checkout", "master"], {stdio: "inherit"});
     await exec("git", ["merge", "--ff-only", actualBranch], {stdio: "inherit"});
