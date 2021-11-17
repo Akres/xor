@@ -10,12 +10,15 @@
     "build": "tsc",
     "watch": "tsc -w",
     "clean": "rimraf ./lib",
-    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore",
-    "fetch": "env-cmd -f ./env.json run-s fetch:do",
-    "fetch:do": "curl https://openexchangerates.org/api/latest.json -H \"Authorization: Token ${APP_ID}\""
+    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
-    "@xor/typescript-config": "^1.0.0"
+    "@xor/typescript-config": "^1.0.0",
+    "@xor/xor-client-domain": "^3.0.1",
+    "@xor/xor-api-cache": "^1.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
   }
 }
