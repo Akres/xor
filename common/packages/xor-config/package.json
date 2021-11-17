@@ -1,0 +1,22 @@
+{
+  "name": "@xor/xor-config",
+  "version": "1.0.0-pre",
+  "description": "Package for loading configuration from env variables",
+  "main": "./lib/index.js",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf ./lib",
+    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
+  },
+  "devDependencies": {
+    "@xor/eslint-config": "^1.1.0",
+    "@xor/typescript-config": "^1.0.0"
+  },
+  "dependencies": {
+    "constant-case": "^3.0.4"
+  }
+}
