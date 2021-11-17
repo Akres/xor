@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "xor/stats.schema.json",
+    "type": "object",
+    "properties": {
+        "favouriteTargetCurrency": {"type": "string"},
+        "totalUsdConverted": {"type": "number"},
+        "totalConversionRequests": {"type": "integer"}
+    },
+    "required": ["favouriteTargetCurrency", "totalUsdConverted", "totalConversionRequests"]
+}

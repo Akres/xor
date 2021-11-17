@@ -7,13 +7,15 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "run-s generate:currencies generate:amounts lib:build",
+    "build": "run-s type:generate lib:build",
+    "type:generate": "run-p generate:currencies generate:amounts generate:stats",
     "lib:build": "tsc",
     "watch": "tsc -w",
     "clean": "rimraf ./lib",
     "lint": "eslint . --ext .ts,.js --ignore-path .eslintignore",
     "generate:currencies": "quicktype ./src/currencies/currency-list.json -s schema -o ./src/currencies/generated.ts -t CurrencyList",
-    "generate:amounts": "quicktype ./src/convert/currency-amount-list.json -s schema -o ./src/convert/generated.ts -t CurrencyAmountList"
+    "generate:amounts": "quicktype ./src/convert/currency-amount-list.json -s schema -o ./src/convert/generated.ts -t CurrencyAmountList",
+    "generate:stats": "quicktype ./src/stats/stats.json -s schema -o ./src/stats/generated.ts -t Stats"
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
