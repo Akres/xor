@@ -19,12 +19,12 @@ module.exports = {
         libraryTarget: "commonjs2"
     },
     resolve: {
-        extensions: [".js", ".json", ".ts", ".tsx"]
+        extensions: [".js", ".json", ".ts"]
     },
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/,
                 use: "ts-loader",
                 exclude: /node_modules/
 
