@@ -1,10 +1,14 @@
 import {Runtime, startServer} from "@xor/xor-api";
-import {createClient} from "@xor/xor-client-mock";
+import {createClient as createRatesClient} from "@xor/xor-client-mock";
+import {createClient as createStatsClient} from "@xor/xor-stats-client-mock";
 import {createCachedClient} from "@xor/xor-api-cache";
 
-const client = createCachedClient(createClient());
+const ratesClient = createCachedClient(createRatesClient());
+const statsClient = createStatsClient();
+
 
 const runtime: Runtime = {
-    getExchangeRatesClient: () => client
+    getExchangeRatesClient: () => ratesClient,
+    getStatsClient: () => statsClient
 };
 startServer(runtime);
