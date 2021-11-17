@@ -16,7 +16,7 @@
     "@types/morgan": "^1.9.3",
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
-    "@xor/xor-client-schema": "^2.0.1"
+    "@xor/xor-client-domain": "^2.0.1"
   },
   "dependencies": {
     "express": "^4.17.1",

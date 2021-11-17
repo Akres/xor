@@ -1,7 +1,7 @@
 import {Runtime} from "../Runtime";
 import {NextFunction, Request, Response} from "express";
 import {getValidatedConvertQueryParams, serializeCurrencyAmountList} from "@xor/xor-api-schema";
-import {Rates} from "@xor/xor-client-schema";
+import {Rates} from "@xor/xor-client-domain";
 
 function toConvertedCurrencyAmount(amountFrom: number, targetCurrency: string, ratesFromBaseCurrency: Rates) {
     const rate = ratesFromBaseCurrency[targetCurrency];
