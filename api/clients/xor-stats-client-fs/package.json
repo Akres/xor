@@ -1,0 +1,25 @@
+{
+  "name": "@xor/xor-stats-client-fs",
+  "version": "1.0.0-pre",
+  "description": "Stats client that saves stats to a file",
+  "main": "./lib/index.js",
+  "author": "Jiri Kantor",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf ./lib",
+    "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
+  },
+  "dependencies": {
+    "@xor/xor-config": "^1.0.0",
+    "proper-lockfile": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/proper-lockfile": "^4.1.2",
+    "@xor/eslint-config": "^1.1.0",
+    "@xor/typescript-config": "^1.0.0",
+    "@xor/xor-stats-client-domain": "^1.0.0-pre"
+  }
+}
