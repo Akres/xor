@@ -11,3 +11,7 @@ export function selectExchange(state: RootState) {
 export function selectError(state: RootState) {
     return state?.error;
 }
+
+export function selectStats(state: RootState) {
+    return state?.stats;
+}
