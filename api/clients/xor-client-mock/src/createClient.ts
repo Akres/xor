@@ -1,4 +1,4 @@
-import {Client} from "@xor/xor-client-schema";
+import {Client} from "@xor/xor-client-domain";
 import getCurrencies from "./getCurrencies";
 import getExchangeRates from "./getExchangeRates";
 

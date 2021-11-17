@@ -1,4 +1,4 @@
-import {Currency} from "@xor/xor-client-schema";
+import {Currency} from "@xor/xor-client-domain";
 import currencies from "./currencies.json";
 
 export default function getCurrencies(): Promise<Currency[]> {

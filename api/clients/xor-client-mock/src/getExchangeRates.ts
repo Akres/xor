@@ -1,4 +1,4 @@
-import {CurrencyRates} from "@xor/xor-client-schema";
+import {CurrencyRates} from "@xor/xor-client-domain";
 import exchangeRatesUsd from "./exchangeRatesUsd.json";
 
 function recalculateRates(targetCurrency: string): CurrencyRates {
