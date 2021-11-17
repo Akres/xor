@@ -1,6 +1,7 @@
 .idea
 **/lib
 **/dist
+**/stats-data
 **/yarn-error.log
 **/node_modules
 lerna-debug.log
