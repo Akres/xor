@@ -17,6 +17,7 @@
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
     "@xor/xor-client-domain": "^3.0.1",
+    "@xor/xor-stats-client-domain": "^1.0.0-pre",
     "@xor/xor-config": "^1.0.0"
   },
   "dependencies": {

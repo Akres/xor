@@ -5,6 +5,7 @@ import {Runtime} from "./Runtime";
 import {ShutdownCallback} from "./ShutdownCallback";
 import handleCurrenciesRequest from "./handlers/handleCurrenciesRequest";
 import handleConvertRequest from "./handlers/handleConvertRequest";
+import handleStatsRequest from "./handlers/handleStatsRequest";
 
 const port = config.api.port;
 
@@ -15,13 +16,15 @@ export default function startServer(runtime: Runtime): ShutdownCallback {
 
     app.get("/currencies", handleCurrenciesRequest.bind(null, runtime));
     app.get("/convert", handleConvertRequest.bind(null, runtime));
+    app.get("/stats", handleStatsRequest.bind(null, runtime));
 
     app.use(function (err: Error, req: Request, res: Response, next: NextFunction) {
         console.error(err);
         next(err);
     });
 
-    const server = app.listen(port, () => {
+    const server = app.listen(port, async () => {
+        await runtime.getStatsClient().init();
         console.log("🚀 listening on port " + port);
     });
 
