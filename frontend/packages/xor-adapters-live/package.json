@@ -13,7 +13,8 @@
     "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
   },
   "devDependencies": {
-    "@xor/xor-domain": "^2.0.3"
+    "@xor/xor-domain": "^2.0.3",
+    "@xor/xor-config": "^1.0.0-pre"
   },
   "dependencies": {
     "@xor/xor-api-schema": "^1.1.0",
