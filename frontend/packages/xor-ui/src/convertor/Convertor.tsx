@@ -19,6 +19,7 @@ import {ExchangeItem} from "./state/ExchangeItem";
 import AddButton from "./AddButton";
 
 import "./Convertor.less";
+import debounce from "../utils/debounce";
 
 interface ConvertorProps {
     currencies: Currency[];
@@ -51,10 +52,13 @@ function Convertor({
         <form className="mt-3">
             <BaseCurrencyAmount
                 currencies={currencies}
-                onCurrencyAmountChanged={async (currencyAmount) => {
-                    updateBaseCurrencyAmount(currencyAmount);
-                    doConvertBase();
-                }}
+                onCurrencyAmountChanged={debounce(
+                    async (currencyAmount) => {
+                        updateBaseCurrencyAmount(currencyAmount);
+                        doConvertBase();
+                    },
+                    500
+                )}
                 currencyAmount={baseCurrencyAmount}
             />
             <div className="my-4 text-light" >
