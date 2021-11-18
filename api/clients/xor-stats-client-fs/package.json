@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-stats-client-fs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Stats client that saves stats to a file",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -20,6 +20,6 @@
     "@types/proper-lockfile": "^4.1.2",
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
-    "@xor/xor-stats-client-domain": "^1.0.0"
+    "@xor/xor-stats-client-domain": "^1.1.0"
   }
 }

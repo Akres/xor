@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](/compare/@xor/xor-stats-client-mock@1.0.0...@xor/xor-stats-client-mock@2.0.0) (2021-11-18)
+
+
+### Features
+
+* **xor-stats-client-mock:** make client operate with low level data 56a8920
+
+
+### BREAKING CHANGES
+
+* **xor-stats-client-mock:** - client has different methods and returns different data
+
+
+
+
+
 # 1.0.0 (2021-11-17)
 
 

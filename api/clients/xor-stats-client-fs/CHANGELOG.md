@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](/compare/@xor/xor-stats-client-fs@1.0.0...@xor/xor-stats-client-fs@2.0.0) (2021-11-18)
+
+
+### Features
+
+* **xor-stats-client-fs:** make client operate with low level data f007e00
+
+
+### BREAKING CHANGES
+
+* **xor-stats-client-fs:**     - client has different methods and returns different data
+
+
+
+
+
 # 1.0.0 (2021-11-17)
 
 

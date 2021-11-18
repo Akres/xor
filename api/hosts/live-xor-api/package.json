@@ -1,6 +1,6 @@
 {
   "name": "@xor/live-xor-api",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Host for live client. Particular client depends on configuration",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -13,10 +13,10 @@
     "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
   },
   "dependencies": {
-    "@xor/xor-api": "^1.4.0",
+    "@xor/xor-api": "^1.5.0",
     "@xor/xor-api-cache": "^1.2.1",
     "@xor/xor-client-openexchangerates": "^1.1.2",
-    "@xor/xor-stats-client-fs": "^1.0.0"
+    "@xor/xor-stats-client-fs": "^2.0.0"
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
