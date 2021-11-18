@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2021-11-18)
+
+
+### Features
+
+* **xor-stats-client-aws:** add aws stats client 718c690
+
+
+
+
+
 # 1.0.0 (2021-11-17)
 
 

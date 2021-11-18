@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-adapters-live",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Adapter for live version of xor app.",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -13,7 +13,7 @@
     "lint": "eslint . --ext .ts,.js --ignore-path ../../../.eslintignore"
   },
   "devDependencies": {
-    "@xor/xor-config": "^1.1.0",
+    "@xor/xor-config": "^1.2.0",
     "@xor/xor-domain": "^2.1.0"
   },
   "dependencies": {

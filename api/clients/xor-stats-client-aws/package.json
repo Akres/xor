@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-stats-client-aws",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Stats client that stores the stats in an AWS DynamoDB",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.41.0",
-    "@xor/xor-config": "^1.1.0"
+    "@xor/xor-config": "^1.2.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@xor/xor-api",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "API server for the xor project",
   "main": "./lib/index.js",
   "author": "Jiri Kantor",
@@ -17,7 +17,7 @@
     "@xor/eslint-config": "^1.1.0",
     "@xor/typescript-config": "^1.0.0",
     "@xor/xor-client-domain": "^3.0.2",
-    "@xor/xor-config": "^1.1.0",
+    "@xor/xor-config": "^1.2.0",
     "@xor/xor-stats-client-domain": "^1.1.0"
   },
   "dependencies": {
