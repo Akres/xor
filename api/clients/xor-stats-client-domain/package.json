@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
-    "@xor/typescript-config": "^1.0.0",
-    "@xor/xor-api-schema": "^1.2.0"
+    "@xor/typescript-config": "^1.0.0"
   }
 }

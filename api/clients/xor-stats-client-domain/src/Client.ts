@@ -1,8 +1,7 @@
-import {Stats} from "@xor/xor-api-schema";
-import {ConversionLog} from "./ConversionLog";
+import {StatsData} from "./StatsData";
 
 export interface Client {
-    getStats(): Promise<Stats>;
-    logConversions(conversionLogs: ConversionLog[]): Promise<void>;
+    getStatsData(): Promise<StatsData>;
+    addStatsData(delta: StatsData): Promise<void>;
     init(): Promise<void>;
 }
