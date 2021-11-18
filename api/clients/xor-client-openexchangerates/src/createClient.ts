@@ -4,8 +4,14 @@ import getExchangeRates from "./getExchangeRates";
 import createApiClient from "./createApiClient";
 import {createCachedGetter} from "@xor/xor-api-cache";
 import fetchUsdExchangeRates from "./fetchUsdExchangeRates";
+import {config, throwIfValueEmpty} from "@xor/xor-config";
+
+function verifyConfig() {
+    throwIfValueEmpty(config.api.openexchangerates.apiUrl, "api.openexchangerates.apiUrl");
+}
 
 export default function createClient(): Client {
+    verifyConfig();
     const apiClient = createApiClient();
 
     // Free plan on openexchangerates does not support fetching currencies other than USD. We will have to
