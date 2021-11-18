@@ -5,11 +5,20 @@ const config: Config = {
         port: 3333,
         openexchangerates: {
             appId: "",
-            apiUrl: "https://openexchangerates.org/api"
+            apiUrl: "https://openexchangerates.org/api",
+            dataValidity: 60 * 60 * 1000 // Free plan has validity of 1 hour
         },
         useAlternativeCurrencies: false,
         useInactiveCurrencies: false,
-        statsDataFilePath: "./stats-data/stats.json"
+        stats: {
+            dataFilePath: "./stats-data/stats.json",
+            client: "fs"
+        },
+        aws: {
+            region: "",
+            accessKeyId: "",
+            secretAccessKey: ""
+        }
     },
     frontend: {
         port: 3000,

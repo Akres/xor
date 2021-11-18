@@ -8,9 +8,18 @@ export interface Config {
         openexchangerates: {
             appId: string;
             apiUrl: string;
+            dataValidity: number; // In miliseconds
+        };
+        aws: {
+            region: string;
+            secretAccessKey: string;
+            accessKeyId: string;
         };
         useAlternativeCurrencies: boolean;
         useInactiveCurrencies: boolean;
-        statsDataFilePath: string;
+        stats: {
+            dataFilePath: string;
+            client: string;
+        };
     };
 }
