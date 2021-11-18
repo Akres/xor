@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.5](/compare/@xor/live-xor-ui@2.1.4...@xor/live-xor-ui@2.1.5) (2021-11-18)
+
+**Note:** Version bump only for package @xor/live-xor-ui
+
+
+
+
+
 ## [2.1.4](/compare/@xor/live-xor-ui@2.1.3...@xor/live-xor-ui@2.1.4) (2021-11-18)
 
 **Note:** Version bump only for package @xor/live-xor-ui

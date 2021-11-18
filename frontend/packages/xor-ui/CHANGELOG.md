@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](/compare/@xor/xor-ui@2.4.0...@xor/xor-ui@2.5.0) (2021-11-18)
+
+
+### Features
+
+* **xor-ui:** add debounce for the input 7382ccd
+
+
+
+
+
 # [2.4.0](/compare/@xor/xor-ui@2.3.1...@xor/xor-ui@2.4.0) (2021-11-17)
 
 
