@@ -1,7 +1,7 @@
 import fs from "fs";
 import {dirname} from "path";
+import {StatsData} from "@xor/xor-stats-client-domain";
 import getStatsFilePath from "./getStatsFilePath";
-import {StatsData} from "./StatsData";
 
 const emptyStats: StatsData = {
     "requestsPerCurrency": {},
