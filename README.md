@@ -66,6 +66,22 @@ is run as part of the build of this package, and the result is committed, so
 if there are any changes in the schema, the generated files will be dirty
 and the `merge` script will not allow merging to master.
 
+### `xor-config`
+Contains a configuration package. It automatically loads configuration
+from environment variables (or default) at the moment it is first imported.
+It has default config values, but all of them can be overridden by environment
+variables. An environment variable name is automatically created from the
+path in the config object. A `XOR_` prefix is prepended to all of them, to
+namespace the variables to the app.
+Example: If you want to set `config.api.openexchangerates.appId` to a value
+different from the default, you need to set an environment variable
+```yaml
+XOR_API_OPENEXCHANGERATES_APP_ID: <your openexchangerates.org app id>
+```
+Basically the config object properties translate to env var names by 
+transforming them to constant case using [constant-case](https://github.com/blakeembrey/change-case/tree/master/packages/constant-case)
+(the breaks are on `.` and lowercase to uppercase interfaces)
+
 ## `frontend`
 Contains the browser UI for the app. It uses React for rendering and Redux
 for state management. The UI can be run in two modes: Live and Mock.
@@ -115,10 +131,48 @@ external services APIs. These are the same idea asi adapters in UI.
 Mock client for exchange rates. Doesn't do any actual requests, just returns
 predefined data with a validity of 10s.
 #### `xor-client-openexchangerates`
-A client for [Openexchangerates](https://openexchangerates.org)
+A client for [Openexchangerates](https://openexchangerates.org).
+It requires 
+```yaml
+XOR_API_OPENEXCHANGERATES_APP_ID: "<your openexchangerates.org app id>",
+```
+environment variable to be set.
+
 #### `xor-client-domain`
 Defines data types and general interface for an exchange rates client. Any
 client must conform to this interface if it is to be used in the API.
+#### `xor-stats-client-domain`
+Defines data types and general interface for a statistics client. Any
+stats client must conform to this interface if it is to be used in the API.
+#### `xor-stats-client-mock`
+Mock client for stats. It creates random stats at the beginning and then
+it appends the requests to it. It is held in memory, so it is reset on 
+restart. It is meant to be used for development.
+#### `xor-stats-client-fs`
+Statistics client that uses a local file as backing storage for the 
+statistics. This is the default backing storage for the live client.
+#### `xor-stats-client-aws`
+Statistics client that uses an AWS DynamoDB as a backing storage for the
+statistics. It expects an item to be already present in the DB. The item
+should look like
+```json
+{
+    "id": 1,
+    "requestsPerCurrency": {},
+    "totalUsdConverted": 0
+}
+```
+`requestsPerCurrency` is a `Map` type of `String` to `Number`.
+It requires the following env vars to be set:
+```yaml
+XOR_API_STATS_CLIENT: "aws"
+XOR_API_AWS_REGION: "<region your data is in>"
+XOR_API_AWS_ACCESS_KEY_ID: "<your account's AWS access key id>"
+XOR_API_AWS_SECRET_ACCESS_KEY: "<your account's AWS secret access key>"
+```
+In short - you can put these in an `env.json` file in the root of this repo 
+and they will be picked up when you run a live client.
+
 ### `hosts`
 This is the same thing as `hosts` in UI. It contains packages, that can 
 actually be executed `mock-xor-api` for mock mode and `live-xor-api` for 
@@ -171,20 +225,50 @@ yarn live:ui:start
 ```
 to start it in Live mode. In either case, the app will be available on
 http://localhost:3000.
+You don't need to set any environment variables to run the ui in either 
+mock or live mode. You can, of course, by setting an environment variable
+as described in the `xor-config` section and looking at the [Config object](./common/packages/xor-config/src/Config.ts)
+for the available config values.
 
 ### Running the API
 It is the same story as UI
 ```shell
 yarn mock:api:start
 ```
-to start in mock mode, or
+to start in mock mode. or
 ```shell
 yarn live:api:start
 ```
 to start in live mode. The API will be available on http://localhost:3333
 
-So far, the API does not have live mode implemented. There will be additional 
-configuration needed for API keys and like.
+The mock mode will not do any communication with external services, it 
+uses predefined data for responses.
+
+Live mode will actually communicate with external services, so you will
+need to create an account in openexchangerates and AWS.
+
+You don't need any environment variables to run the API in mock mode,
+but for it to run in live mode, you at least need to set 
+```yaml
+XOR_API_OPENEXCHANGERATES_APP_ID: "<your openexchangerates.org app id>",
+```
+That will start the API with a live connection to openexchangerates, but
+it will still use a local file as a storage for the statistics.
+If you want to use AWS DynamoDB as a storage for the statistics, you need to
+set
+```yaml
+XOR_API_STATS_CLIENT: "aws"
+XOR_API_AWS_REGION: "<region your data is in>"
+XOR_API_AWS_ACCESS_KEY_ID: "<your account's AWS access key id>"
+XOR_API_AWS_SECRET_ACCESS_KEY: "<your account's AWS secret access key>"
+```
+Your AWS User needs to have 
+```yaml
+"dynamodb:GetItem",
+"dynamodb:UpdateItem"
+```
+permissions set for the `xor-stats` table. The basic table structure is
+described in `xor-stats-client-aws` section.
 
 ## What should be here, if it was a production app
 * Tests, tests, tests
