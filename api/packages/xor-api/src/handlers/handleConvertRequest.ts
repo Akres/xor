@@ -2,7 +2,7 @@ import {Runtime} from "../Runtime";
 import {NextFunction, Request, Response} from "express";
 import {getValidatedConvertQueryParams, serializeCurrencyAmountList} from "@xor/xor-api-schema";
 import {Rates} from "@xor/xor-client-domain";
-import {ConversionLog} from "@xor/xor-stats-client-domain";
+import logConversions from "./logConversions";
 
 function convert(amountFrom: number, targetCurrency: string, ratesFromBaseCurrency: Rates) {
     const rate = ratesFromBaseCurrency[targetCurrency];
@@ -43,15 +43,8 @@ export default async function handleConvertRequest(
             })
         );
 
-        const statsClient = runtime.getStatsClient();
         const usdAmount = convert(amount, "USD", exchangeRatesForBaseCurrency.rates);
-        const logs: ConversionLog[] = to.map((targetCurrencyCode) => ({
-            targetCurrencyCode,
-            totalUsd: usdAmount
-        }));
-        console.log("Logging", logs);
-        await statsClient.logConversions(logs);
-
+        await logConversions(runtime, to, usdAmount);
     } catch(e) {
         console.log(e);
         next(e);
