@@ -16,7 +16,9 @@
     "@xor/xor-api": "^1.5.0",
     "@xor/xor-api-cache": "^1.2.1",
     "@xor/xor-client-openexchangerates": "^1.1.2",
-    "@xor/xor-stats-client-fs": "^2.0.0"
+    "@xor/xor-config": "^1.1.0",
+    "@xor/xor-stats-client-fs": "^2.0.0",
+    "@xor/xor-stats-client-aws": "^1.0.0-pre"
   },
   "devDependencies": {
     "@xor/eslint-config": "^1.1.0",
